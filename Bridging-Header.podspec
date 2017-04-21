@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Bridging-Header'
-  s.version          = '0.1.0'
+  s.version          = ‘0.2.0’
   s.summary          = 'A short description of Bridging-Header'
 
 # This description is used to generate tags and improve search results.
@@ -21,17 +21,20 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/reiya/Bridging-Header'
+  s.homepage         = 'https://github.com/reiya/Bridging-Header.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'reiya' => 'reiya.matsuki.1990.09.23@gmail.com' }
-  s.source           = { :git => 'https://github.com/reiya/Bridging-Header.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/reiya/Bridging-Header.git', :tag => s.version }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = '${POD_NAME}/Classes/*.m'
-  s.public_header_files = '${POD_NAME}/Classes/*.h'
+  s.source_files = 'Bridging-Header/Classes/*.{h,m}'
+
+
+
+  #s.public_header_files = '${POD_NAME}/Classes/*.h'
   
   # s.resource_bundles = {
   #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
