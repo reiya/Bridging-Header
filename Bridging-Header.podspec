@@ -32,7 +32,7 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'Bridging-Header/Classes/*.{h,m}'
   s.public_header_files = 'Bridging-Header/Classes/*.h'
-  s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'Bridging-Header/Bridging-Header/Bridging-Header.h' }
+  s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'Bridging-Header/Classes/Bridging-Header.h' }
   # s.resource_bundles = {
   #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
   # }
