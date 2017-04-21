@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Bridging-Header'
   s.version          = '0.2.0'
-  s.summary          = 'A short description of Bridging-Header'
+  s.summary          = 'AutoLayout add sub view Bridging-Header'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -31,10 +31,13 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Bridging-Header/Classes/*.{h,m}'
+  s.public_header_files = 'Bridging-Header/Classes/*.h’
+
+#s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'Bridging-Header/Bridging/Bridging-Header.h' }
 
 
 
-  #s.public_header_files = 'Bridging-Header/Classes/*.h’
+
   
   # s.resource_bundles = {
   #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
