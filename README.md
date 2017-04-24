@@ -1,26 +1,37 @@
-pod-template
+Bridging-Header
 ============
 
-An opinionated template for creating a Pod with the following features:
+## Installation with CocoaPods
 
-- Git as the source control management system
-- Clean folder structure
-- Project generation
-- MIT license
-- Testing as a standard
-- Turnkey access to Travis CI
-- Also supports Carthage
+```bash
+$ gem install cocoapods
+```
+#### Podfile
 
-## Getting started
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
 
-There are two reasons for wanting to work on this template, making your own or improving the one for everyone's. In both cases you will want to work with the ruby classes inside the `setup` folder, and the example base template that it works on from inside `template/ios/`. 
+target 'TargetName' do
+ pod "Bridging-Header"
+end
+```
 
-## Best practices
+## Usage
 
-The command `pod lib create` aims to be ran along with this guide: http://guides.cocoapods.org/making/using-pod-lib-create.html so any changes of flow should be updated there also.
+```objective-c
+   override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        BHOCallSwift.callSwift()
+    }
+```
 
-It is open to communal input, but adding new features, or new ideas are probably better off being discussed in an issue first. In general we try to think if an average Xcode user is going to use this feature or not, if it's unlikely is it a _very strongly_ encouraged best practice ( ala testing / CI. ) If it's something useful for saving a few minutes every deploy, or isn't easily documented in the guide it is likely to be denied in order to keep this project as simple as possible.
+## Complete
+<p align="center" >
+  <img src="https://github.com/reiya/Bridging-Header/blob/1.0.0/Pod/Assets/complete.png" alt="Bridging-Header" title="Bridging-Header">
+</p>
 
-## Requirements:
+## License
 
-- CocoaPods 1.0.0+
+Bridging-Header is released under the MIT license. See LICENSE for details.
